@@ -1,0 +1,257 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*to kept the size of every element to be 100px if added padding to it*/
+}
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:60px;
+    padding: 15px;  
+}
+main{
+    height: calc(100vh - 70px);
+    display: flex;
+    background-color: #f9f9f9;
+}
+.side-bar{
+    height: 100%;
+    width: 17%;
+    background-color: white;
+    overflow-y: scroll; /*the vertical scrollbar (y-axis scrolling) is disabled and any content that overflows the container will be hidden instead of being scrollable.*/
+}
+
+
+.left{
+    display: flex;
+    align-items: center;
+}
+.left #menu{
+    /* Top-bottom zero and left right 7px padding */
+    padding: 0 7px; 
+    cursor: pointer;
+}
+.search{
+    display: flex;
+}
+form{
+    border-radius: 40px;
+}
+.search form{
+    display: flex;
+    border: 3px solid #ddd;
+    height: 45px;
+    border-radius: 20px;
+}
+.search input{
+    width: 600px;
+    padding: 10px;
+    border:0;
+    height: 100%;
+    /* Set its border-radius to 2px top, 0 right, 0 bottom, and 2px left. */
+    border-radius:20px 0 0 20px;
+}
+.button-modifications{
+    border-radius: 0 20px 20px 0px;
+}
+input:focus{
+    outline: none;
+    /* The outline: none; CSS property removes the default outline that appears around an element when it is focused */
+    /* box-shadow: 0 0 5px #FF0000; */
+}
+
+.search button{
+    height: 100%;
+    width: 60px;
+    border: none;
+}
+.mic{
+    margin-top: 10px;
+}
+.material-icons{
+    color: #0F0F0F;
+    padding: 0 7px;
+    cursor: pointer;
+}
+.create-button{
+    height: 100%;
+    width: 95px;
+    border: none;
+    border-radius: 10px;
+}
+/* Style the nav bar */
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+}
+.nav-link span{
+    margin-left: 15px;
+    font-size: 14px;
+}
+.nav-link:hover{
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.active{
+    background-color: #e5e5e5;
+}
+/* separate categories */
+hr{
+    height: 1px;
+    background-color: #e5e5e5;
+    border:none;
+}
+
+.content{
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+}
+.videos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* When the screen can only take four items, for example, other items will be moved to another row. That is what “flex-wrap” does. */
+    flex-wrap: wrap;
+}
+.video{
+    width: 270px;
+    margin-bottom: 30px;
+}
+.thumbnail{
+    width: 100%;
+    height: 170px;
+}
+.thumbnail img{
+    object-fit: cover;
+    height: 94%;
+    width: 100%;
+}
+.authur img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+.details{
+    display: flex;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+}
+.title h3{
+    color: rgb(3,3,3);
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.title a, 
+span{
+    text-decoration: none;
+    color: rgb(96,96,96);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .side-bar{
+        display: none;
+    }
+
+    .search {
+        display: none;
+      }
+}
+@media screen and (max-width: 900px) {
+    .search input{
+        width: 25rem;
+    }
+}
+
+.right{
+    display: flex;
+    margin-top: 5px;
+}
+.create{
+    margin-top: 0px;
+}
+.create button{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-family: 'Robot', sans-serif;
+}
+.create-button{
+    height: 35px;
+    width: 105px;
+    border-radius: 30px;
+}
+.add{
+    font-size: 34px;
+    font-weight: lighter;
+}
+.subscriptions{
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #0f0f0f;
+    margin-top: 25px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+#side-bar-thirdpart{
+    padding: 6px 12px 6px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.font{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #0F0F0F;
+}
+.sub-subscriptions img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+.sub-subscriptions{
+    display: flex;
+}
+.sub-subscriptions span{
+    padding: 5px 5px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #0F0F0F;
+
+}
+
+#side-bar-Fourthpart{
+    padding: 6px 12px 6px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
